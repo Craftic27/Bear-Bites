@@ -581,12 +581,6 @@
                 }
             }
 
-            @media (prefers-reduced-motion:reduce) {
-                .product,.product-modal,.product-modal-panel,.product-modal-description {
-                    transition-duration:.01ms !important;
-                }
-            }
-
             .about-card {
                 margin-top: 70px;
                 padding: 35px;
@@ -1573,8 +1567,8 @@
                 }
 
                 .title.storefront-header .tab img {
-                    width:22px;
-                    height:22px;
+                    width: 60px;
+                    height: 60px;
                 }
 
                 .title.storefront-header .tab span {
@@ -1587,6 +1581,11 @@
 
                 .main-container {
                     margin-top:8px;
+                }
+
+                .documentation-clover-pin {
+                    width: 80px;
+                    height: 80px;
                 }
             }
 
@@ -2150,87 +2149,87 @@
             }
 
             .product-bear-frame {
-                width:min(84vw,490px) !important;
-                height:auto;
-                aspect-ratio:1/1;
-                max-height:58dvh !important;
-                flex:0 1 auto !important;
+                width: min(84vw,490px) !important;
+                height: auto;
+                aspect-ratio: 1/1;
+                max-height: 58dvh !important;
+                flex: 0 1 auto !important;
             }
 
             .product-bear-background {
                 display:block !important;
-                top:-5%;
-                left:-5%;
-                width:110%;
-                height:110%;
-                object-fit:contain;
+                top: -5%;
+                left: -5%;
+                width: 110%;
+                height: 110%;
+                object-fit: contain;
             }
 
             .product-modal-photo {
-                width:58% !important;
-                height:58% !important;
-                max-width:58%;
-                max-height:58%;
-                object-fit:contain;
-                border:4px solid #fffdf7;
-                border-radius:18px;
-                background:#fffdf7;
-                box-sizing:border-box;
+                width: 58% !important;
+                height: 58% !important;
+                max-width: 58%;
+                max-height: 58%;
+                object-fit: contain;
+                border: 4px solid #fffdf7;
+                border-radius: 18px;
+                background: #fffdf7;
+                box-sizing: border-box;
             }
 
             .product-modal-description {
-                width:min(92%,560px) !important;
-                max-height:24dvh !important;
-                overflow:auto;
-                padding:clamp(9px,1.5vh,14px) clamp(12px,2vw,20px) !important;
-                font-size:clamp(12px,1.8vw,16px) !important;
-                line-height:1.4 !important;
+                width: min(92%,560px) !important;
+                max-height: 24dvh !important;
+                overflow: auto;
+                padding: clamp(9px,1.5vh,14px) clamp(12px,2vw,20px) !important;
+                font-size: clamp(12px,1.8vw,16px) !important;
+                line-height: 1.4 !important;
             }
 
             .product-modal-close {
-                top:0 !important;
-                right:0 !important;
+                top: 0 !important;
+                right: 0 !important;
             }
 
             @media (max-width:750px) {
                 .page[data-index="1"] .products {
-                    grid-template-columns:repeat(2,minmax(0,1fr));
-                    gap:6px;
+                    grid-template-columns: repeat(2,minmax(0,1fr));
+                    gap :6px;
                 }
 
                 .page[data-index="1"] .product {
-                    padding:4px 3px 24px;
+                    padding: 4px 3px 24px;
                 }
 
                 .page[data-index="1"] .product-card-art {
-                    width:min(100%, 230px);
-                    aspect-ratio:1 / 1;
-                    border-radius:22px;
+                    width: min(100%, 230px);
+                    aspect-ratio :1 / 1;
+                    border-radius: 22px;
                 }
 
                 .page[data-index="1"] .product-photo {
-                    top:-4%;
-                    left:-10%;
-                    width:120%;
-                    height:100%;
+                    top: -4%;
+                    left: -10%;
+                    width: 120%;
+                    height: 100%;
                 }
 
                 .page[data-index="1"] .product-title-row {
-                    left:20%;
-                    right:2%;
-                    bottom:2%;
-                    height:21%;
+                    left: 20%;
+                    right: 2%;
+                    bottom: 2%;
+                    height: 21%;
                 }
 
                 .page[data-index="1"] .product-title-bear {
-                    left:-33%;
-                    width:36%;
-                    height:135%;
+                    left: -63%;
+                    width: 77%;
+                    height: 180%;
                 }
 
                 .page[data-index="1"] .product-name-art {
-                    max-width:100%;
-                    max-height:100%;
+                    max-width: 550%;
+                    max-height: 550%;
                 }
 
                 .product-bear-frame {
@@ -2256,7 +2255,6 @@
                 }
             }
         
-            /* Documentation gallery */
             .documentation-page {
                 padding: 30px 24px 40px;
                 overflow-y: auto;
@@ -2328,6 +2326,8 @@
                 aspect-ratio: 1.55 / 1;
             }
 
+
+
             .documentation-photo.featured .documentation-clover-pin:last-of-type {
                 left: 88%;
             }
@@ -2397,6 +2397,25 @@
                 opacity: 0;
             }
 
+            .documentation-lightbox.featured-open .documentation-lightbox-panel {
+                width: min(1100px, 96vw);
+            }
+
+            .documentation-lightbox.featured-open .documentation-lightbox-photo-frame {
+                box-sizing: border-box;
+                width: min(88vw, 1000px);
+                max-height: 78vh;
+                padding: 16px 16px 28px;
+            }
+
+            .documentation-lightbox.featured-open .documentation-lightbox-photo {
+                width: 100%;
+                height: min(68vh, 680px);
+                aspect-ratio: 1.55 / 1;
+                object-fit: contain;
+            }
+
+
             .documentation-lightbox-pin {
                 position: absolute;
                 z-index: 2;
@@ -2421,6 +2440,19 @@
                 text-align: center;
                 line-height: 1.6;
                 box-shadow: 0 5px 0 rgba(0, 0, 0, .15);
+            }
+
+            .documentation-lightbox-title {
+                margin: 0 0 8px;
+                color: #8d6251;
+                font-family: Georgia, serif;
+                font-size: 22px;
+                font-style: italic;
+            }
+
+            .documentation-lightbox-description-text {
+                margin: 0;
+                min-height: 1.6em;
             }
 
             .documentation-lightbox-close {
@@ -2486,26 +2518,78 @@
                     font-size: 13px;
                 }
             }
+        
+            .product-price-tag {
+                position:absolute;
+                z-index:4;
+                right:17%;
+                bottom:12%;
+                display:grid;
+                place-items:center;
+                min-width: 100px;
+                min-height: 78px;
+                padding:7px 12px;
+                color:#a3221b;
+                background:#fff9e9;
+                border:0;
+                clip-path: polygon(5% 18%, 19% 20%, 22% 3%, 37% 13%, 49% 0, 60% 13%, 77% 5%, 79% 21%, 97% 18%, 91% 38%, 100% 52%, 88% 66%, 92% 84%, 72% 82%, 59% 100%, 45% 87%, 28% 96%, 23% 80%, 5% 83%, 11% 63%, 0 49%, 12% 35%);
+                filter:drop-shadow(0 2px 0 #171717) drop-shadow(0 0 2px #171717);
+                font-family:"Comic Sans MS","Trebuchet MS",sans-serif;
+                font-size:clamp(22px,4.5vw,34px);
+                font-weight:900;
+                line-height:1;
+                letter-spacing:-1px;
+                text-align:center;
+                white-space:nowrap;
+                transform:rotate(-8deg) scale(.7);
+                opacity:0;
+                pointer-events:none;
+                text-shadow: -2px -2px 0 #fff9e9, 2px -2px 0 #fff9e9, -2px 2px 0 #fff9e9, 2px 2px 0 #fff9e9, 0 3px 0 #f28b69;
+                transition:transform .35s cubic-bezier(.2,.8,.2,1),opacity .25s ease;
+            }
 
-            @media (prefers-reduced-motion: reduce) {
-                .documentation-photo,
-                .documentation-lightbox,
-                .documentation-lightbox-panel,
-                .documentation-lightbox-photo {
-                    transition-duration: .01ms !important;
+            .product-modal.is-open .product-price-tag {
+                opacity:1;
+                transform:rotate(-8deg) scale(1);
+                transition-delay:.08s;
+            }
+
+            .product-price-tag::before {
+                content:"";
+                position:absolute;
+                inset:4px;
+                z-index:-1;
+                background:#f47e61;
+                clip-path:inherit;
+            }
+            
+            .product-price-tag::after {
+                content:"";
+                position:absolute;
+                inset:8px;
+                z-index:-1;
+                background:#fff9e9;
+                clip-path:inherit;
+            }
+
+            @media (max-width:750px) {
+                .product-price-tag {
+                    right:15%;
+                    bottom: 12%;
+                    min-width: 88px;
+                    min-height: 64px;
+                    padding: 5px 9px;
+                    font-size: clamp(19px,5vw,27px);
                 }
             }
 </style>
     </head>
     <body>
-        <audio id="backgroundMusic" preload="auto"></audio>
+        <audio id="backgroundMusic" preload="auto" autoplay playsinline></audio>
         <div class="now-playing" id="nowPlaying">
             <div class="now-playing-label">NOW PLAYING</div>
             <div class="now-playing-title" id="songTitle">Song Title</div>
             <div class="now-playing-artist" id="songArtist">Artist</div>
-        </div>
-        <div class="intro-screen" id="introScreen" aria-hidden="true">
-            <img class="intro-media" src="intro.gif" alt="" draggable="false">
         </div>
         <div class="website">
             <header class="title storefront-header">
@@ -2573,7 +2657,7 @@
                         <img class="products-heading-image image-slot-empty" data-image-slot="products-heading" src="https://craftic27.github.io/Bear-Bites-Assets/products.png" alt="Products" aria-label="Products heading artwork">
                         <div class="products-heading-fallback">Products</div>
                         <div class="products">
-                            <article class="product" tabindex="0" role="button" aria-haspopup="dialog" data-name="Bear Bites" data-description="Bear Bites are rich, chocolatey brownies served with a velvety and creamy ube dip. Made with semi-sweet chocolate, cocoa powder, and butter, these brownies have a slightly crackly outside with a soft, fudgy center. The combination of deep rich chocolate and sweet nutty ube creates a unique and delicious flavor, making every bite a mouthwatering experience. Get yours now for only ₱62">
+                            <article class="product" tabindex="0" role="button" aria-haspopup="dialog" data-name="Bear Bites" data-description="Bear Bites are rich, chocolatey brownies served with a velvety and creamy ube dip. Made with semi-sweet chocolate, cocoa powder, and butter, these brownies have a slightly crackly outside with a soft, fudgy center. The combination of deep rich chocolate and sweet nutty ube creates a unique and delicious flavor, making every bite a mouthwatering experience. Get yours now for only ₱69!">
                                 <div class="product-card-art">
                                     <img class="product-photo image-slot-empty" data-image-slot="brownie-product" src="https://craftic27.github.io/Bear-Bites-Assets/brownies.png" alt="Bear Bites">
                                     <img class="product-card-decoration image-slot-empty" data-image-slot="brownie-decoration" src="https://craftic27.github.io/Bear-Bites-Assets/products-design.png" alt="" aria-hidden="true">
@@ -2583,7 +2667,7 @@
                                     </div>
                                 </div>
                             </article>
-                            <article class="product" tabindex="0" role="button" aria-haspopup="dialog" data-name="Tato Tops" data-description="Tato Tops are crispy, golden, marbled spud potatoes with melted cheese and flavorful longganisa bits. Seasoned with garlic, pepper, salt, and paprika, each bite offers an explosion of flavors. With a perfect balance of savory, cheesy, and a slight tangy flavors, these potato bites are crispy on the outside, and creamy on the inside, creating a delicious combination that makes every bite worth craving. Get yours now for only ₱40">
+                            <article class="product" tabindex="0" role="button" aria-haspopup="dialog" data-name="Tato Tops" data-description="Tato Tops are crispy, golden, marbled spud potatoes with melted cheese and flavorful longganisa bits. Seasoned with garlic, pepper, salt, and paprika, each bite offers an explosion of flavors. With a perfect balance of savory, cheesy, and a slight tangy flavors, these potato bites are crispy on the outside, and creamy on the inside, creating a delicious combination that makes every bite worth craving. Get yours now for only ₱39!">
                                 <div class="product-card-art">
                                     <img class="product-photo image-slot-empty" data-image-slot="tato-product" src="https://craftic27.github.io/Bear-Bites-Assets/potatoes.png" alt="Tato Tops">
                                     <img class="product-card-decoration image-slot-empty" data-image-slot="tato-decoration" src="https://craftic27.github.io/Bear-Bites-Assets/products-design.png" alt="" aria-hidden="true">
@@ -2613,11 +2697,12 @@
                                 <img class="documentation-photo-image" src="https://craftic27.github.io/Bear-Bites-Assets/Stalls1.jpeg" alt="Documentation photo 4">
                                 <img class="documentation-clover-pin" src="https://craftic27.github.io/Bear-Bites-Assets/clover.png" alt="">
                             </button>
-                            <button class="documentation-photo featured" type="button" data-doc-id="featured" aria-label="Open featured documentation photo">
-                                <img class="documentation-photo-image" src="https://craftic27.github.io/Bear-Bites-Assets/Selling1.jpg" alt="Featured documentation photo">
+                            <button class="documentation-photo featured" type="button" data-doc-id="featured" aria-label="Open BIG documentation photo">
+                                <img class="documentation-photo-image" src="https://craftic27.github.io/Bear-Bites-Assets/Selling1.jpg" alt="BIG documentation photo">
                                 <img class="documentation-clover-pin featured1" src="https://craftic27.github.io/Bear-Bites-Assets/clover.png" alt="">
                                 <img class="documentation-clover-pin" src="https://craftic27.github.io/Bear-Bites-Assets/clover.png" alt="">
                             </button>
+
                         </div>
                     </section>
                 </div>
@@ -2629,6 +2714,7 @@
                 <div class="product-bear-frame">
                     <img class="product-bear-background image-slot-empty" id="productBearBackground" data-image-slot="bear-background" src="https://craftic27.github.io/Bear-Bites-Assets/bear.png" alt="" aria-hidden="true">
                     <img class="product-modal-photo" id="productModalPhoto" alt="">
+                    <span class="product-price-tag" id="productPriceTag" aria-label="Product price"></span>
                 </div>
                 <div class="product-modal-description" id="productModalDescription"></div>
             </div>
@@ -2640,7 +2726,10 @@
                     <img class="documentation-lightbox-photo" id="documentationLightboxPhoto" src="" alt="">
                     <img class="documentation-lightbox-pin" src="https://craftic27.github.io/Bear-Bites-Assets/clover.png" alt="">
                 </div>
-                <div class="documentation-lightbox-description" id="documentationLightboxDescription"></div>
+                <div class="documentation-lightbox-description">
+                    <h3 class="documentation-lightbox-title" id="documentationLightboxTitle"></h3>
+                    <p class="documentation-lightbox-description-text" id="documentationLightboxDescription"></p>
+                </div>
             </div>
         </div>
         <div class="poster-lightbox" id="posterLightbox" role="dialog" aria-label="Expanded poster image" aria-modal="true" tabindex="-1">
@@ -2922,29 +3011,13 @@
                 }
             }, { passive: true });
 
-            const introScreen = document.querySelector("#introScreen");
-            document.body.classList.add("intro-active");
             function startPageIntro() {
-                if (!introScreen) {
-                    document.body.classList.remove("intro-active");
-                    document.body.classList.add("page-intro");
-                    return;
-                }
-
-                setTimeout(() => {
-                    introScreen.classList.add("is-finished");
-                    document.body.classList.remove("intro-active");
-                    document.body.classList.add("page-intro");
-                    setTimeout(() => {
-                        introScreen.remove();
-                    }, 800);
-
-                    setTimeout(() => {
-                        document.body.classList.remove("page-intro");
-                    }, 4050);
-                }, 3000);
+                document.body.classList.remove("intro-active");
+                document.body.classList.add("page-intro");
+                setTimeout(() => document.body.classList.remove("page-intro"), 4050);
             }
 
+            startPageIntro();
             const backgroundMusic = document.querySelector("#backgroundMusic");
             const musicToggle = document.querySelector("#musicToggle");
             const nowPlaying = document.querySelector("#nowPlaying");
@@ -2956,11 +3029,13 @@
                 title: "Day 1",
                 artist: "Red Velvet"
             },
+
             {
                 file: "https://craftic27.github.io/Bear-Bites-Assets/Sofia.mp3",
                 title: "Sofia",
                 artist: "Clairo"
             },
+
             {
                 file: "https://craftic27.github.io/Bear-Bites-Assets/Pain.mp3",
                 title: "Pain",
@@ -3007,38 +3082,43 @@
 
             backgroundMusic.addEventListener("ended", playNextSong);
             function startBackgroundMusic() {
-                if (!backgroundMusic || musicStarted || playlist.length === 0) {
-                    return;
+                if (!backgroundMusic || playlist.length === 0) return;
+                backgroundMusic.volume = 0.5;
+                backgroundMusic.muted = false;
+                if (!backgroundMusic.getAttribute("src")) {
+                    loadSong(currentSongIndex);
+                    backgroundMusic.load();
                 }
 
-                musicStarted = true;
-                backgroundMusic.muted = false;
-                backgroundMusic.volume = 0.5;
-                loadSong(currentSongIndex);
                 const playPromise = backgroundMusic.play();
                 if (playPromise !== undefined) {
-                    playPromise.catch(() => {
+                    playPromise.then(() => {
+                        musicStarted = true;
+                    }).catch(() => {
                         musicStarted = false;
                     });
                 }
             }
 
             function retryMusicAfterInteraction() {
-                if (!backgroundMusic || backgroundMusic.muted) {
-                    return;
-                }
-
-                if (backgroundMusic.paused) {
-                    const playPromise = backgroundMusic.play();
-                    if (playPromise !== undefined) {
-                        playPromise.then(() => {
-                                musicStarted = true;
-                        })
-                        
-                        .catch(() => {});
-                    }
+                if (!backgroundMusic || backgroundMusic.muted || !backgroundMusic.paused) return;
+                const playPromise = backgroundMusic.play();
+                if (playPromise !== undefined) {
+                    playPromise.then(() => {
+                        musicStarted = true;
+                    }).catch(() => {
+                        musicStarted = false;
+                    });
                 }
             }
+
+            ["pointerdown", "keydown", "touchstart"].forEach(eventName => {
+                document.addEventListener(eventName, retryMusicAfterInteraction, { passive: true });
+            });
+
+            backgroundMusic.addEventListener("canplay", () => {
+                if (!backgroundMusic.muted && backgroundMusic.paused) retryMusicAfterInteraction();
+            });
 
             if (musicToggle && backgroundMusic) {
                 musicToggle.addEventListener("click", () => {
@@ -3060,14 +3140,13 @@
                 });
             }
 
-            setTimeout(() => {
-                startBackgroundMusic();
-            }, 4050);
+            startBackgroundMusic();
 
             const productModal = document.getElementById("productModal");
             const productModalPhoto = document.getElementById("productModalPhoto");
             const productModalDescription = document.getElementById("productModalDescription");
             const productBearBackground = document.getElementById("productBearBackground");
+            const productPriceTag = document.getElementById("productPriceTag");
             const productCards = [...document.querySelectorAll(".product")];
             let lastProductTrigger = null;
             function closeProductModal() {
@@ -3102,6 +3181,13 @@
 
                 productModalPhoto.alt = card.dataset.name || "Product image";
                 productModalDescription.textContent = card.dataset.description || "";
+                const priceMatch = (card.dataset.description || "").match(/₱\s?\d+(?:\.\d{2})?/);
+                if (productPriceTag) {
+                    productPriceTag.textContent = priceMatch ? priceMatch[0].replace(/\s+/g, "") : "";
+                    productPriceTag.style.display = priceMatch ? "grid" : "none";
+                    productPriceTag.setAttribute("aria-label", priceMatch ? `Price ${priceMatch[0]}` : "Price unavailable");
+                }
+
                 lastProductTrigger = card;
                 productModal.classList.add("is-open");
                 productModal.setAttribute("aria-hidden", "false");
@@ -3206,7 +3292,8 @@
                         "https://craftic27.github.io/Bear-Bites-Assets/Designing5.jpg",
                     ],
 
-                    description: "Description for photo 1"
+                    title: "Designing",
+                    description: "These pictures capture the preparations and teamwork that took place behind the scenes before our selling activity. They show the students working together to prepare the stall, arrange the grazing table, and finalize the designs according to our plans. Each member contributed time, effort, and creativity to ensure that everything was ready for the event. These behind-the-scenes moments show that a successful business requires cooperation, careful planning, and dedication."
                 },
 
                 photo2: {
@@ -3220,7 +3307,8 @@
                         "https://craftic27.github.io/Bear-Bites-Assets/Cooking7.jpg"
                     ],
                     
-                    description: "Description for photo 2"
+                    title: "Food Preparation and Production Process",
+                    description: "These pictures show the Cookery students preparing our appetizers, Tato Pops and Bear Bites, which were later sold as part of our business. The photos capture Erin, Fritz, Angeline, Aldeia, and Nade working together to prepare and cook the products. Both appetizers were made with care, cleanliness, and, most importantly, love and dedication. We also incorporated ingredients with a Filipino touch to support local products and showcase our pride in being Filipino."
                 },
 
                 photo3: {
@@ -3234,7 +3322,8 @@
                         "https://craftic27.github.io/Bear-Bites-Assets/Grazing7.jpg"
                     ],
 
-                    description: "Description for photo 3"
+                    title: "Grazing Table",
+                    description: "These pictures showcase our products displayed on the grazing table alongside the appetizers and products of other student businesses. The Bear Bites are arranged on a tiered serving stand, while the Tato Pops are placed in boxes below it, with four potato pieces in each serving. The tiered stand and organized arrangement make our appetizers look more appealing and presentable. Through this display, we aimed to attract customers and showcase our products alongside those of other young entrepreneurs."
                 },
 
                 photo4: {
@@ -3246,7 +3335,8 @@
                         "https://craftic27.github.io/Bear-Bites-Assets/Stalls5.jpeg"
                     ],
 
-                    description: "Description for photo 4"
+                    title: "Stall",
+                    description: "These pictures feature our stall, the main area where we displayed and sold our products to potential customers. The stall was designed by the Computer Programming and Visual Arts students to reflect the identity, logo, and overall theme of our business through its pink color and creative decorations. The winnowing basket, a traditional Filipino object, features our business name spelled out using banana leaves, along with other Filipino-inspired designs. These elements showcase our appreciation for Philippine culture and our pride as young Filipino entrepreneurs."
                 },
 
                 featured: {
@@ -3260,17 +3350,35 @@
                         "https://craftic27.github.io/Bear-Bites-Assets/Selling7.jpg"
                     ],
 
-                    description: "Description for photo 5"
+                    title: "Selling",
+                    description: "These pictures document our advertising and selling activities during the event. The first picture shows us, the students, performing an imitation of the viral “Dinorobong Tubo” dance on TikTok in front of our stall to entertain passersby, attract potential buyers, and encourage them to purchase our products. The other photos show us displaying and selling our products to students and other potential customers at the University of the Assumption Junior High School. We welcomed and assisted interested buyers respectfully, presented our products, and encouraged them to make a purchase. Through this experience, we applied what we learned about entrepreneurship, advertising, customer service, and the importance of building good relationships with consumers."
                 }
             };
 
             const documentationLightbox = document.getElementById("documentationLightbox");
             const documentationLightboxPhoto = document.getElementById("documentationLightboxPhoto");
             const documentationLightboxDescription = document.getElementById("documentationLightboxDescription");
+            const documentationLightboxTitle = document.getElementById("documentationLightboxTitle");
+            const documentationTypingSpeed = 25;
+            let documentationTypingTimer = null;
+            function typeDocumentationDescription(text) {
+                window.clearTimeout(documentationTypingTimer);
+                documentationLightboxDescription.textContent = "";
+                let characterIndex = 0;
+                function typeNextCharacter() {
+                    documentationLightboxDescription.textContent += text.charAt(characterIndex);
+                    characterIndex++;
+                    if (characterIndex < text.length) {
+                        documentationTypingTimer = window.setTimeout(typeNextCharacter, documentationTypingSpeed);
+                    }
+                }
+
+                typeNextCharacter();
+            }
+
             let activeDocumentationGroup = null;
             let activeDocumentationImageIndex = 0;
             let documentationCycleTimer = null;
-
             function showDocumentationImage(index) {
                 if (!activeDocumentationGroup) return;
                 const images = activeDocumentationGroup.images;
@@ -3287,8 +3395,10 @@
             }
 
             function closeDocumentationLightbox() {
-                documentationLightbox.classList.remove("is-open");
+                documentationLightbox.classList.remove("is-open", "featured-open");
                 documentationLightbox.setAttribute("aria-hidden", "true");
+                window.clearTimeout(documentationTypingTimer);
+                documentationLightboxDescription.textContent = "";
                 document.body.style.overflow = "";
                 window.clearInterval(documentationCycleTimer);
                 documentationCycleTimer = null;
@@ -3299,8 +3409,10 @@
                 const group = documentationGroups[groupId];
                 if (!group || !group.images.length) return;
                 activeDocumentationGroup = group;
+                documentationLightbox.classList.toggle("featured-open", groupId === "featured");
                 activeDocumentationImageIndex = 0;
-                documentationLightboxDescription.textContent = group.description;
+                documentationLightboxTitle.textContent = group.title || "";
+                typeDocumentationDescription(group.description || "");
                 documentationLightboxPhoto.onload = () => documentationLightboxPhoto.classList.remove("is-switching");
                 documentationLightboxPhoto.onerror = () => documentationLightboxPhoto.classList.remove("is-switching");
                 documentationLightboxPhoto.classList.remove("is-switching");
@@ -3315,6 +3427,7 @@
                         showDocumentationImage((activeDocumentationImageIndex + 1) % group.images.length);
                     }, 2000);
                 }
+                
                 documentationLightbox.querySelector(".documentation-lightbox-close").focus({ preventScroll: true });
             }
 
@@ -3334,7 +3447,6 @@
             });
 
             updateStack(0);
-            startPageIntro();
         </script>
     </body>
 </html>
